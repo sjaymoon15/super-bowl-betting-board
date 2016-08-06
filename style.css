@@ -1,3 +1,12 @@
+body {
+  font-family: Arial;
+  background-image: url(http://fullhdpictures.com/wp-content/uploads/2015/10/American-Football-Wallpapers-HD.jpg);
+}
+
+
+.sign-up-wrapper {
+
+}
 /* checkbox - each time slot */
 .time-slot               {  }
 
@@ -18,25 +27,25 @@
 
 /* if the label is checked */
 .time-slot input:checked ~ label { 
-  background:#f2dede; 
+  background:#F99090; 
   cursor:not-allowed;
   animation:flashBooked 0.5s ease; 
 }
 
 /* if the label is not checked */
 .time-slot input:not(:checked) ~ label { 
-  background:#6AB074; 
+  background:rgb(119, 218, 78); 
   animation:flashAvailable 0.5s ease; 
 }
 
 /* animation for the time slot to flash red */
 @keyframes flashBooked {
-  0%, 100%  { background:#f2dede; transform:scale(1); }
-  50%       { background:#F99090; transform:scale(1.5); }
+  0%, 100%  { background:#F99090; transform:scale(1); }
+  50%       { background:#f2dede; transform:scale(1.5); }
 }
 
 /* animation for the time slot to flash green */
 @keyframes flashAvailable {
-  0%, 100%  { background:#6AB074; transform:scale(1); }
-  50%       { background:rgb(119, 218, 78); transform:scale(1.5); }
+  0%, 100%  { background:rgb(119, 218, 78); transform:scale(1); }
+  50%       { background:#6AB074; transform:scale(1.5); }
 }
