@@ -27,6 +27,7 @@ app.controller('mainController', function($scope, $firebaseObject, Auth) {
       $scope.userEmail = userData.email;
       userData.userName = userData.email.split('@')[0];
       $scope.userName =  userData.userName;
+
       // console.log(userData);
 
     }).catch(function(error) {
@@ -70,13 +71,13 @@ app.controller('mainController', function($scope, $firebaseObject, Auth) {
     })
   };
 
-  // $scope.auth = Auth;
+  $scope.auth = Auth;
 
-  //   // any time auth status updates, add the user data to scope
-  // $scope.auth.$onAuth(function(authData) {
-  //   console.log('authData', authData);
-  //   $scope.authData = authData;
-  // });
+    // any time auth status updates, add the user data to scope
+  $scope.auth.$onAuth(function(authData) {
+    console.log('authData', authData);
+    $scope.authData = authData;
+  });
 
   var scoresRef = new Firebase("https://betting.firebaseio.com/scores");
   console.log(scoresRef);
@@ -645,7 +646,8 @@ app.controller('mainController', function($scope, $firebaseObject, Auth) {
   $scope.putUser = function(userName){
     console.log('this', this);
     console.log('userName', userName);
-    this.slot.user = userName;   //set?
+    this.slot.user = userName;   //set
+    
   }
   
 

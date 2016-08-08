@@ -27,8 +27,8 @@
 <div class="container" ng-app="scheduleApp" ng-controller="mainController">
   
   <div class="page-header text-center">       
-    <h1>Super Bowl Betting Board</h1>  
-    <h2>Your Team Sucks vs My Team Wins</h2>  
+    <h1>2017 Super Bowl Betting Board</h1>  
+    <h2>?? vs ??</h2>  
   </div>
 
   <!-- were doing one day with 1 time slot for simplicity -->
@@ -42,7 +42,7 @@
       <div class="time-slot" ng-repeat="slot in score.slots">       
         <input ng-click='putUser(userName)' type="checkbox" id="{{$index}}-{{score.name}}" ng-model="slot.booked" ng-disabled="slot.booked">
         <label for="{{$index}}-{{score.name}}">{{slot.time}}</label>
-          <span ng-if="slot.booked">{{slot.user}}</span>
+          <span ng-if="slot.booked"><strong>{{slot.user}}</strong></span>
           <span ng-if="!slot.booked">---</span>
       </div>
     </div>   
@@ -57,7 +57,7 @@
           <button ng-click="removeUser()">Remove User</button>
           <!-- <button ng-click="removeUser()">Remove User</button> -->
         </div>
-        <p ng-if="signUpMessage">Message: <strong>{{ signUpMessage }}</strong></p>
+        <p ng-if="signUpMessage">Message: <h3><strong>{{ signUpMessage }}</strong></h3></p>
         <p ng-if="signUpError">Error: <strong>{{ signUpError }}</strong></p>
       </div>
       <!-- <div>
@@ -77,7 +77,7 @@
   </div>
 
   <p class="text-center">    
-    <a href="#" class="btn btn-primary" ng-click='reset()'>Reset</a>
+    <a href="#" class="reset" ng-click='reset()'>R</a>
   </p>
 
 </div>  

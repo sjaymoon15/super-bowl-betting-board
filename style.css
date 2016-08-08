@@ -3,10 +3,6 @@ body {
   background-image: url(http://fullhdpictures.com/wp-content/uploads/2015/10/American-Football-Wallpapers-HD.jpg);
 }
 
-
-.sign-up-wrapper {
-
-}
 /* checkbox - each time slot */
 .time-slot               {  }
 
@@ -36,6 +32,14 @@ body {
 .time-slot input:not(:checked) ~ label { 
   background:rgb(119, 218, 78); 
   animation:flashAvailable 0.5s ease; 
+}
+
+.reset {
+  float: right;
+}
+
+.sign-up-wrapper {
+  
 }
 
 /* animation for the time slot to flash red */
